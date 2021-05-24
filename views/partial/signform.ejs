@@ -1,0 +1,20 @@
+<div class="container bg-sign">
+    <form class="mt-5 distance" action="/login" method="POST">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label text-white">Email address</label>
+            <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter Your Email">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label text-white" name="password">Password</label>
+            <input type="password" class="form-control" name="password" id="exampleInputPassword1"
+                placeholder="Enter Your Password">
+        </div>
+        <button type="submit" class="btn btn-light">login</button>
+    </form>
+    <div class="login-status mt-3">
+        <% if(notif == "dataSalah"){ %>
+        <%- include('wrongpassword') %>
+        <% } %>
+    </div>
+</div>

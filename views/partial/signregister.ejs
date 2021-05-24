@@ -1,0 +1,22 @@
+<div class="container bg-sign">
+    <form class="mt-5 distance" action="/signup" method="POST">
+        <div class="mb-3">
+            <label for="Input Name" class="form-label text-white" >User Name</label>
+            <input type="text" class="form-control" name="name" placeholder="name" aria-label="Username"
+                aria-describedby="basic-addon1">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label text-white">Email address</label>
+            <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter Your Email">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label text-white" >Password</label>
+            <input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Enter Your Password">
+        </div>
+        <button type="submit" class="btn btn-light">Register</button>
+    </form>
+    <% if(notif === "berhasildisimpan"){ %>
+        <%- include('messageregister') %> 
+    <% } %>  
+</div>
